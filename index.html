@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Own Cheat Code</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Major+Mono+Display&family=Merriweather:ital@0;1&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>The Ultimate Guide for Positioning!</h1>
+        <h2>or at least a quick reminder*</h2>
+        <p class="disclaimer">If your'e like me - confused by how positioning in CSS works, this might help. I hope.</p>
+    </header>
+    <main>
+        <section>
+            <h3>Positioning</h3>
+            <p>There are four types of positioning in CSS:</p>
+            <ul>
+                <li>Static</li>
+                <li>Relative</li>
+                <li>Absolute</li>
+                <li>Fixed</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Static</h3>
+            <p>Static is the default positioning in CSS. It means that the element will be positioned according to the normal flow of the document. This is the default value.</p>
+            <p class="example">For example:</p>
+            <p class="code">position:static;</p>
+            <div class="box"> </div>
+            <div class="box" id="one"><p>Static</p></div>
+            <div class="box"></div>
+
+        </section>
+        <section>
+            <h3>Relative</h3>
+            <p>Relative positioning is the same as static, but the element can be moved from its normal position. The element will still occupy the same space as before, but it can be moved around.</p>
+            <p class="example">For example:</p>
+            <p class="code">position:relative;<br>
+                top:20px;<br>
+                left:20px;</p>
+            <div class="box"> </div>
+            <div class="box" id="two"><p>Relative</p></div>
+            <div class="box"></div>
+        </section>
+        <section>
+            <h3>Absolute</h3>
+            <p>Absolute positioning is relative to the nearest positioned ancestor. If there is no positioned ancestor, it will be relative to the initial containing block. The element will be removed from the normal flow of the document, and will not affect the position of other elements.</p>
+            <p class="example">For example:</p>
+            <p class="code">position:absolute;<br>
+                top:20px;<br>
+                left:20px;</p>
+         <div class="overflowS">
+            <div class="box"> </div>
+            <div class="box" id="three"><p>Absolute</p></div>
+            <div class="box"></div>
+         </div>
+        </section>
+        <section>
+            <h3>Fixed</h3>
+            <p>Fixed positioning is relative to the viewport. The element will be removed from the normal flow of the document, and will not affect the position of other elements. The element will remain in the same position even if the page is scrolled.</p>
+            <p class="example">For example: (look for it in the top right of viewport)</p>
+            <p class="code">position:fixed;<br>
+                top:20px;<br>
+                left:20px;</p>
+            <div class="overflowS">
+            <div class="box"> </div>
+            <div class="box" id="four"><p>Fixed <br><span>Sorry, someone told me to stand here.</span></p>
+        </div>
+            <div class="box"></div>
+            </div>
+        </section>
+        <section>
+            <h3>Sticky</h3>
+            <p>Sticky positioning is a hybrid of relative and fixed positioning. The element is treated as relative positioned until it crosses a specified threshold, at which point it is treated as fixed positioned.</p>
+            <p class="example">For example:</p>
+            <p class="code">position:sticky;<br>
+                top:20px;<br>
+                left:20px;</p>
+        <div class="overflow">
+            <div class="box infinite"></div>
+            <div class="box" id="five"><p>Sticky</p></div>
+            <div class="box infinite"></div>
+            </div>
+        </section>
+    </main>
+    <article>
+        <h2>Others</h2>
+        <section>
+            <h3>Overlapping Elements</h3>
+            <p>When elements overlap, the element that appears later in the HTML code will be shown on top. You can use the z-index property to specify the stack order of the elements.</p>
+            <div><p class ="example">for example:</p>
+                <p class="code"> position: relative;<br>
+                    background-color: blue;<br>
+                    opacity: 90%;<br>
+                    right: 65px;<br>
+                    z-index: 1;</p>
+                <div class="box"><p>0</p></div>
+                <div class="box" id="six"><p>1</p></div>
+            </div>
+        </section>
+        <section>
+            <h3>Centering Elements</h3>
+            <p>To center an element horizontally, you can use the margin property with the value auto. To center an element vertically, you can use the position property with the value absolute and the top and bottom properties set to 0.</p>
+    </article>
+    <footer>
+        All rights reserved to the interent and the people who made it. Thank you Bill Gates.
+    </footer>
+</body>
+</html>
